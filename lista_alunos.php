@@ -1,7 +1,7 @@
 <?php require_once 'cabecalho.html' ?>
 <?php
 
-$service_url = 'http://localhost:8080/ProjetoSD/agenda/contatoservico/contato/listar';
+$service_url = 'x_listar';
 
 $get_data = retornaGet($service_url);
 
