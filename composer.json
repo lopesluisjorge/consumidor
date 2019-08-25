@@ -1,0 +1,15 @@
+{
+  "name": "luanerys/consumidor",
+  "authors": [
+    {
+      "name": "Jorge Luis L. Amorim",
+      "email": "lopesluisjorge@hotmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Alunos\\": "src/"
+    }
+  }
+}
