@@ -55,14 +55,14 @@
                             </div>
                             <div class="form-group">
                                 <label for="telefone">Telefone</label>
-                                <input name="telefone" type="text" class="form-control" placeholder="(98)xxxxx-xxxx)">
+                                <input name="telefone" type="text" class="form-control" placeholder="(98) 9xxxx-xxxx">
                             </div>
                             <button type="submit" class="btn">Salvar</button>
                 </div>
             </div>
             </form>
-            </section>
-            <!-- Grid system
+    </section>
+    <!-- Grid system
         ================================================== -->
     </section>
 

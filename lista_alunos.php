@@ -1,7 +1,8 @@
-<?php require_once 'cabecalho.html' ?>
+<?php require_once 'cabecalho.html';
+require_once 'rest_api.php'; ?>
 <?php
 
-$service_url = 'x_listar';
+$service_url = 'http://localhost:8080/trabalho-rest-sd-v1/academico/alunos/lista';
 
 $get_data = retornaGet($service_url);
 
@@ -33,40 +34,39 @@ $response = json_decode($get_data, true);
     <section id="maincontent">
         <div class="container">
             <div class="span12">
-            <div class="row">
-        <div class="col-md-4">
-            <a href="cadastrar.php" class="btn btn-success btn-block">Cadastrar novo aluno</a>
-        </div>
-    <hr>
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>Código</th>
-                        <th>RG</th>
-                        <th>CPF</th>
-                        <th>Nome</th>
-                        <th>Endereço</th>
-                        <th>Telefone</th>
-                        <th class="acao">Editar</th>
-                        <th class="acao">Excluir</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php foreach ($response as $linha): ?>
-                        <tr>
-                            <td><?=$linha['codigo']?></td>
-                            <td><?=$linha['rg']?></td>
-                            <td><?=$linha['cpf']?></td>
-                            <td><?=$linha['nome']?></td>
-                            <td><?=$linha['endereco']?></td>
-                            <td><?=$linha['telefone']?></td>
-                            <td><a href="editar.php?id=<?=$linha['id']?>&codigo=<?=$linha['codigo']?>&rg=<?=$linha['rg']?>&cpf=<?=$linha['cpf']?>&nome=<?=$linha['nome']?>&endereco=<?=$linha['endereco']?>&etelefone=<?=$linha['telefone']?>" class="btn btn-info">Editar</a></td>
-                            <td><a href="excluir.php?id=<?=$linha['id']?>" class="btn btn-danger">Excluir</a></td>
-                        </tr>
-                    <?php endforeach ?>
-                </tbody>
-            </table>
-        </div>
-    </div>    
-</section>
-        
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="cadastrar.php" class="btn btn-success btn-block">Cadastrar novo aluno</a>
+                    </div>
+                    <hr>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Código</th>
+                                <th>RG</th>
+                                <th>CPF</th>
+                                <th>Nome</th>
+                                <th>Endereço</th>
+                                <th>Telefone</th>
+                                <th class="acao">Editar</th>
+                                <th class="acao">Excluir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($response as $linha) : ?>
+                            <tr>
+                                <td><?= $linha['codigoAluno'] ?></td>
+                                <td><?= $linha['rg'] ?></td>
+                                <td><?= $linha['cpf'] ?></td>
+                                <td><?= $linha['nome'] ?></td>
+                                <td><?= $linha['endereco'] ?></td>
+                                <td><?= $linha['telefone'] ?></td>
+                                <td><a href="editar.php?id=<?= $linha['id'] ?>&codigo=<?= $linha['codigo'] ?>&rg=<?= $linha['rg'] ?>&cpf=<?= $linha['cpf'] ?>&nome=<?= $linha['nome'] ?>&endereco=<?= $linha['endereco'] ?>&etelefone=<?= $linha['telefone'] ?>" class="btn btn-info">Editar</a></td>
+                                <td><a href="excluir.php?id=<?= $linha['id'] ?>" class="btn btn-danger">Excluir</a></td>
+                            </tr>
+                            <?php endforeach ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </section>
