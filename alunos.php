@@ -1,4 +1,4 @@
-<?php require_once 'cabecalho.html' ?>
+<?php include_once 'cabecalho.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">

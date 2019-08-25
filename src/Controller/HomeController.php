@@ -8,6 +8,6 @@ class HomeController
 {
     public function index()
     {
-        include __DIR__ . '/../../lista_alunos.php';
+        include __DIR__ . '/../../home.php';
     }
 }

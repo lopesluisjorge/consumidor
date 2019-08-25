@@ -1,14 +1,5 @@
-<?php require_once 'cabecalho.html';
-require_once 'rest_api.php'; ?>
-<?php
+<?php require_once 'cabecalho.php' ?>
 
-$service_url = 'http://localhost:8080/trabalho-rest-sd-v1/academico/alunos/lista';
-
-$get_data = retornaGet($service_url);
-
-$response = json_decode($get_data, true);
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 

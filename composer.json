@@ -2,6 +2,10 @@
   "name": "luanerys/consumidor",
   "authors": [
     {
+      "name": "Luana Alves",
+      "email": "luana281013@gmail.com"
+    },
+    {
       "name": "Jorge Luis L. Amorim",
       "email": "lopesluisjorge@hotmail.com"
     }
@@ -10,6 +14,9 @@
   "autoload": {
     "psr-4": {
       "Alunos\\": "src/"
-    }
+    },
+    "files": [
+      "./rest_api.php"
+    ]
   }
 }
