@@ -8,6 +8,6 @@ class HomeController
 {
     public function index()
     {
-        include __DIR__ . '/../../home.php';
+        include \view('home', null);
     }
 }

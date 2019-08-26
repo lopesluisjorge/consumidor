@@ -1,4 +1,3 @@
-<?php require_once 'rest_api.php' ?>
 
 <?php
 
@@ -15,3 +14,4 @@ echo '</pre>';
 //foreach($d as $data){
 //   echo $d['nome'];
 //}
+?>

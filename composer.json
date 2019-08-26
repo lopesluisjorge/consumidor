@@ -16,7 +16,8 @@
       "Alunos\\": "src/"
     },
     "files": [
-      "./rest_api.php"
+      "./rest_api.php",
+      "./helpers.php"
     ]
   }
 }

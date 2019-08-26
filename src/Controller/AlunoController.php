@@ -17,12 +17,12 @@ class AlunoController
 
         $response = json_decode($get_data, true);
 
-        include_once __DIR__ . '/../../lista_alunos.php';
+        view('alunos/lista_alunos', $response);
     }
 
     public function formCadastrar()
     {
-        include_once __DIR__ . '/../../alunos.php';
+        include_once view('alunos/alunos', null);
     }
 
     public function cadastrar()
@@ -45,7 +45,7 @@ class AlunoController
 
     public function formEditar()
     {
-        include_once __DIR__ . '/../../alunos.php';
+        include_once view('alunos/alunos', null);
     }
 
     public function editar()
