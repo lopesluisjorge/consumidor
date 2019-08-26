@@ -35,8 +35,6 @@ class AlunoController
             'telefone' => $_POST['telefone'],
         );
 
-        var_dump($data);
-
         crudRest('POST', $service_url, $data);
 
         header('Location: /alunos/listar');
@@ -47,7 +45,6 @@ class AlunoController
         $id = $_GET['id'];
 
         $service_url = 'http://localhost:8080/trabalho-rest-sd-v1/academico/alunos/recupera/' . $id;
-        var_dump($service_url);
         $get_data = retornaGet($service_url);
         $response = json_decode($get_data, true);
         $data = $response;

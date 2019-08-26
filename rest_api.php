@@ -4,8 +4,6 @@ function crudRest($metodo, $service_url, $data)
 {
     switch ($metodo) {
         case 'POST':
-
-            var_dump($service_url, $data);
             $ch = curl_init($service_url);
             $payload = json_encode($data);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
