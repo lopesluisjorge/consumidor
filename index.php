@@ -14,7 +14,7 @@ $router->get('/alunos/cadastrar', 'AlunoController@formCadastrar');
 $router->post('/alunos/cadastrar', 'AlunoController@cadastar');
 $router->get('/alunos/editar', 'AlunoController@formEditar');
 $router->post('/alunos/editar', 'AlunoController@editar');
-$router->post('/alunos/excluir', 'AlunoController@excluir');
+$router->get('/alunos/excluir', 'AlunoController@excluir');
 
 $app = new App($router);
 

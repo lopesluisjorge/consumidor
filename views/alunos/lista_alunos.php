@@ -19,7 +19,7 @@
         <div class="span12">
             <div class="row">
                 <div class="col-md-4">
-                    <a href="cadastrar.php" class="btn btn-success btn-block">Cadastrar novo aluno</a>
+                    <a href="/alunos/cadastrar" class="btn btn-success btn-block">Cadastrar novo aluno</a>
                 </div>
                 <hr>
                 <table class="table">
@@ -44,8 +44,8 @@
                             <td><?= $linha['nome'] ?></td>
                             <td><?= $linha['endereco'] ?></td>
                             <td><?= $linha['telefone'] ?></td>
-                            <td><a href="editar.php?id=<?= $linha['id'] ?>&codigo=<?= $linha['codigo'] ?>&rg=<?= $linha['rg'] ?>&cpf=<?= $linha['cpf'] ?>&nome=<?= $linha['nome'] ?>&endereco=<?= $linha['endereco'] ?>&etelefone=<?= $linha['telefone'] ?>" class="btn btn-info">Editar</a></td>
-                            <td><a href="excluir.php?id=<?= $linha['id'] ?>" class="btn btn-danger">Excluir</a></td>
+                            <td><a href="/alunos/editar?id=<?= $linha['codigoAluno'] ?>" class="btn btn-info">Editar</a></td>
+                            <td><a href="/alunos/excluir?id=<?= $linha['codigoAluno'] ?>" class="btn btn-danger">Excluir</a></td>
                         </tr>
                         <?php endforeach ?>
                     </tbody>

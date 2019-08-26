@@ -22,7 +22,7 @@ class AlunoController
 
     public function formCadastrar()
     {
-        include_once view('alunos/alunos', null);
+        include_once view('alunos/cadastro', null);
     }
 
     public function cadastrar()
@@ -45,12 +45,20 @@ class AlunoController
 
     public function formEditar()
     {
-        include_once view('alunos/alunos', null);
+        $id = $_GET['id'];
+
+        $service_url = 'http://localhost:8080/trabalho-rest-sd-v1/academico/alunos/recupera/' . $id;
+        var_dump($service_url);
+        $get_data = retornaGet($service_url);
+        $response = json_decode($get_data, true);
+        $data = $response;
+
+        view('alunos/edicao', $data);
     }
 
     public function editar()
     {
-        $service_url = 'http://localhost:8080/trabalho-rest-sd-v1/academico/alunos/atualiza/' . $_POST['id'];
+        $service_url = 'http://localhost:8080/trabalho-rest-sd-v1/academico/alunos/atualiza/' . $_POST['codigoAluno'];
 
         $data = array(
             'codigoAluno' => $_POST['codigoAluno'],
@@ -68,6 +76,7 @@ class AlunoController
 
     public function excluir()
     {
+
         $id = $_GET['id'];
         $service_url = 'http://localhost:8080/trabalho-rest-sd-v1/academico/alunos/remove/' . $id;
 

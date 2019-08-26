@@ -24,10 +24,10 @@
 
                 <section id="global">
 
-                    <form action="cadastrar.php" method="post">
+                    <form action="/alunos/cadastrar" method="POST">
                         <div class="form-group">
                             <label for="codigo">Código</label>
-                            <input name="codigo" type="text" class="form-control" placeholder="Código do aluno" required>
+                            <input name="codigoAluno" type="text" class="form-control" placeholder="Código do aluno" required>
                         </div>
                         <div class="form-group">
                             <label for="rg">RG</label>
@@ -50,7 +50,9 @@
                             <input name="telefone" type="text" class="form-control" placeholder="(98) 9xxxx-xxxx">
                         </div>
                         <button type="submit" class="btn">Salvar</button>
+                    </form>
+
+                </section>
             </div>
         </div>
-        </form>
 </section>
