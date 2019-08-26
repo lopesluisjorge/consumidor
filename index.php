@@ -9,7 +9,6 @@ $router = new Router();
 
 $router->get('/', 'HomeController@index');
 $router->get('/alunos/listar', 'AlunoController@listar');
-$router->get('/alunos/detalhes', 'AlunoController@detalhes');
 $router->get('/alunos/cadastrar', 'AlunoController@formCadastrar');
 $router->post('/alunos/cadastrar', 'AlunoController@cadastrar');
 $router->get('/alunos/editar', 'AlunoController@formEditar');

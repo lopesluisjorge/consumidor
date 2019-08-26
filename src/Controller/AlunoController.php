@@ -6,9 +6,6 @@ namespace Alunos\Controller;
 
 class AlunoController
 {
-    public function detalhes()
-    { }
-
     public function listar()
     {
         $service_url = 'http://localhost:8080/trabalho-rest-sd-v1/academico/alunos/lista';
