@@ -11,7 +11,7 @@ $router->get('/', 'HomeController@index');
 $router->get('/alunos/listar', 'AlunoController@listar');
 $router->get('/alunos/detalhes', 'AlunoController@detalhes');
 $router->get('/alunos/cadastrar', 'AlunoController@formCadastrar');
-$router->post('/alunos/cadastrar', 'AlunoController@cadastar');
+$router->post('/alunos/cadastrar', 'AlunoController@cadastrar');
 $router->get('/alunos/editar', 'AlunoController@formEditar');
 $router->post('/alunos/editar', 'AlunoController@editar');
 $router->get('/alunos/excluir', 'AlunoController@excluir');

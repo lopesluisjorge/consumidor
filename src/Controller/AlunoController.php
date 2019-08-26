@@ -22,7 +22,7 @@ class AlunoController
 
     public function formCadastrar()
     {
-        include_once view('alunos/cadastro', null);
+        view('alunos/cadastro', null);
     }
 
     public function cadastrar()
@@ -37,6 +37,8 @@ class AlunoController
             'endereco' => $_POST['endereco'],
             'telefone' => $_POST['telefone'],
         );
+
+        var_dump($data);
 
         crudRest('POST', $service_url, $data);
 
