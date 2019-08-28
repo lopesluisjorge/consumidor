@@ -24,7 +24,8 @@
                     <form action="/alunos/editar" method="POST">
                         <div class="form-group">
                             <label for="codigo">Código</label>
-                            <input name="codigoAluno" type="text" class="form-control" placeholder="Código do aluno" value="<?= $dados['codigoAluno'] ?>" required>
+                            <input type="text" class="form-control" placeholder="Código do aluno" value="<?= $dados['codigoAluno'] ?>" disabled>
+                            <input type="hidden" name="codigoAluno" value="<?= $dados['codigoAluno'] ?>">
                         </div>
 
                         <div class="form-group">

@@ -49,6 +49,7 @@ class AlunoController
         $response = json_decode($get_data, true);
         $data = $response;
 
+
         view('alunos/edicao', $data);
     }
 
@@ -75,6 +76,7 @@ class AlunoController
 
         $id = $_GET['id'];
         $service_url = 'http://localhost:8080/trabalho-rest-sd-v1/academico/alunos/remove/' . $id;
+
 
         crudRest('DELETE', $service_url, false);
 

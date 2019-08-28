@@ -64,7 +64,7 @@
                         <a href="/">Home</a>
                       </li>
                       <li class="dropdown">
-                        <a href="/alunos">Alunos</a>
+                        <a href="/alunos/cadastrar">Alunos</a>
                         <ul class="dropdown-menu">
                           <li><a href="/alunos/cadastrar">Cadastrar</a></li>
                           <li><a href="/alunos/listar">Listar</a></li>

@@ -9,11 +9,11 @@ function crudRest($metodo, $service_url, $data)
             curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
             curl_setopt($ch, CURLOPT_HEADER, true);
-            $result = curl_exec($ch);
+            curl_exec($ch);
 
-            $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
             curl_close($ch);
             break;
+
         case 'PUT':
             $ch = curl_init($service_url);
             $payload = json_encode($data);
@@ -23,17 +23,17 @@ function crudRest($metodo, $service_url, $data)
             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_HEADER, true);
-            $result = curl_exec($ch);
-            $httpcode2 = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            curl_exec($ch);
+
             curl_close($ch);
             break;
 
         case 'DELETE':
-
             $ch = curl_init($service_url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
-            $response = curl_exec($ch);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
+            curl_exec($ch);
+
             curl_close($ch);
             break;
     }

@@ -30,16 +30,16 @@
                             <input name="codigoAluno" type="text" class="form-control" placeholder="Código do aluno" required>
                         </div>
                         <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input name="nome" type="text" class="form-control" placeholder="Nome do aluno">
+                        </div>
+                        <div class="form-group">
                             <label for="rg">RG</label>
                             <input name="rg" type="text" class="form-control" placeholder="xxxxxxx-x" required>
                         </div>
                         <div class="form-group">
                             <label for="cpf">CPF</label>
                             <input name="cpf" type="text" class="form-control" placeholder="xxx.xxx.xxx-xx" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="nome">Nome</label>
-                            <input name="nome" type="text" class="form-control" placeholder="Nome do aluno">
                         </div>
                         <div class="form-group">
                             <label for="endereco">Endereco</label>
